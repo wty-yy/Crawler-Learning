@@ -3,7 +3,7 @@
 from booking.booking import Booking
 
 # 在退出该层后，bot会自动销毁，会调用bot.__exit__()可以将浏览器关闭
-with Booking(driver_path=r"D:\SeleniumDriver\chromedriver.exe",
+with Booking(driver_path=r"C:\SeleniumDriver\chromedriver.exe",
              teardown=False) as bot:
     bot.land_first_page()
     bot.change_currency(currency='CNY')
