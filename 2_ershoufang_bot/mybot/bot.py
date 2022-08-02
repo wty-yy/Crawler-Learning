@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from mybot.my_requester import Requester
 from tqdm import tqdm
+import os
 
 class Bot(webdriver.Chrome):
     def __init__(self, driver_path, pg, teardown=False):
@@ -33,6 +34,8 @@ class Bot(webdriver.Chrome):
             self.requester.get_info()
             self.close()
             self.switch_to.window(self.window_handles[1])
+        if num > self.pg[0]:
+            os.remove(f'result{self.pg[0]}~{num-1}.csv')
         self.requester.save_data(f'result{self.pg[0]}~{num}.csv')
         self.close()
         self.switch_to.window(self.window_handles[0])
