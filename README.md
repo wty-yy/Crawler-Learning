@@ -1,6 +1,12 @@
 # Crawler-Learning
 
-该项目保存基于Selenium的爬虫项目
+该项目保存基于Selenium的爬虫项目，需要安装：
+
+```shell
+pip install selenium
+```
+
+并在[该网站上](http://chromedriver.storage.googleapis.com/index.html)下载好于浏览器对应版本的 `chromedriver.exe` 放在 `C:\SeleniumDriver\chromedriver.exe` 目录下.
 
 1. [入门项目](./1_booking_bot)，制作在booking.com网站上查找并筛选酒店的机器人，并且将酒店的相关信息保存到表格中. 参考教程: [Selenium Course for Beginners - Web Scraping Bots, Browser Automation, Testing (Tutorial)
 
